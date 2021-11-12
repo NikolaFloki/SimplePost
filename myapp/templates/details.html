@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block details %}
+
+<ul>
+ <li>{{ one_result.id }}</li>
+ <li>{{ one_result.title }}</li>
+ <li>{{ one_result.text }}</li>
+ <li>{{ one_result.created }}</li>
+
+</ul>
+<br>
+
+<li><a href="{% url 'home_page' %}">Back to Home Page</a></li>
+
+<li><a href="{% url 'admin'%}">Back to Admin Administration</a></li>
+
+{% endblock %}

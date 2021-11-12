@@ -1,1 +1,19 @@
-<h1>Home Page</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+<h1>Listing Posts</h1>
+
+{% for post in all_posts %}
+
+<ul>
+    <li><a href="details/{{ post.id }}">{{ post.id }} - {{ post.title }} - {{ post.text }}</a></li> 
+</ul>
+
+{% endfor %}
+
+
+{% endblock %}
