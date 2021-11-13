@@ -17,3 +17,15 @@ def details(request, id):
 def admin(request):
     response = redirect('admin')
     return response
+
+def add_post(request):
+    if (request.method == 'POST'):
+        title = request.POST['title']
+        text  = request.POST['text']
+        result = Posts(title = title, text = text)
+        result.save()
+        return redirect('home_page')
+
+    else:
+        return render(request, 'home_page.html')
+
