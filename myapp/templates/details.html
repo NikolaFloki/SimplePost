@@ -1,18 +1,23 @@
 {% extends 'base.html' %}
 
 {% block details %}
+<ul class="list-group">
+    <li class="list-group-item">A simple default list group item</li>
+  
+    <li class="list-group-item list-group-item-primary">{{ one_result.id }}</li>
+    <li class="list-group-item list-group-item-secondary">{{ one_result.title }}</li>
+    <li class="list-group-item list-group-item-success">{{ one_result.text }}</li>
+    <li class="list-group-item list-group-item-danger">{{ one_result.created }}</li>
+    
+  </ul>
 
-<ul>
- <li>{{ one_result.id }}</li>
- <li>{{ one_result.title }}</li>
- <li>{{ one_result.text }}</li>
- <li>{{ one_result.created }}</li>
 
-</ul>
 <br>
 
-<li><a href="{% url 'home_page' %}">Back to Home Page</a></li>
+  <li><a href="{% url 'home_page' %}">Back to Home Page</a></li>
 
-<li><a href="{% url 'admin'%}">Back to Admin Administration</a></li>
+  <li><a href="{% url 'admin'%}">Back to Admin Administration</a></li>
+
+<br>
 
 {% endblock %}
